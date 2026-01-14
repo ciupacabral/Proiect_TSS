@@ -1,0 +1,136 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
+  <title>Coverage Report > MutantKilled</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">&lt;empty package name&gt;</a>
+</div>
+
+<h1>Coverage Summary for Class: MutantKilled (&lt;empty package name&gt;)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Branch, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">MutantKilled</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/22)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/9)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode"><b class="nc">&nbsp;public class MutantKilled {</b>
+&nbsp;    public String decideScholarship(double media, int absente, int venit) {
+&nbsp;        // Validari standard...
+<b class="nc">&nbsp;        if (media &lt; 1.00 || media &gt; 10.00) return &quot;EROARE&quot;;</b>
+<b class="nc">&nbsp;        if (absente &lt; 0) return &quot;EROARE&quot;;</b>
+<b class="nc">&nbsp;        if (venit &lt; 0) return &quot;EROARE&quot;;</b>
+&nbsp;
+&nbsp;        // Original: absente &lt;= 10
+&nbsp;        // Modificat: absente &lt;= 5
+&nbsp;        // Testul cu 8 absente va pica aici (se asteapta la Merit, dar nu primeste)
+<b class="nc">&nbsp;        if (media &gt;= 9.50 &amp;&amp; absente &lt;= 5) {</b>
+<b class="nc">&nbsp;            return &quot;BURSA_MERIT&quot;;</b>
+&nbsp;        }
+&nbsp;
+<b class="nc">&nbsp;        if (media &gt;= 8.50 &amp;&amp; absente &lt;= 20) return &quot;BURSA_STUDIU&quot;;</b>
+<b class="nc">&nbsp;        if (venit &lt; 1500 &amp;&amp; media &gt;= 5.00 &amp;&amp; absente &lt; 30) return &quot;BURSA_SOCIALA&quot;;</b>
+&nbsp;
+<b class="nc">&nbsp;        return &quot;RESPINS&quot;;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2025-12-01 17:34</div>
+</div>
+</body>
+</html>
